@@ -5,7 +5,7 @@ import {
   hasLowercaseValidator, 
   hasNumberValidator, 
   hasUppercaseValidator 
-} from '../validators/custom.validator'; 
+} from '../../validators/custom.validator'; 
 
 @Component({
   selector: 'app-login',

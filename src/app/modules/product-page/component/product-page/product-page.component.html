@@ -1,0 +1,80 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row mt-4">
+        <!-- Product Image -->
+        <div class="col-sm-6 col1">
+            <div>
+                <img src="//cdn.shopify.com/s/files/1/2227/7667/products/LenovoDB60SlimUSBPortableDVDBurnerDB60-WW_1024x1024.jpg?v=1671768668"/>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-sm-6 col2">
+            <div>
+                <h2>Lenovo DB60 Slim USB Portable DVD Burner DB60-WW</h2>
+                <h1>₱650.00</h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-3">
+                    <label>Quantity:</label>
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <button class="btn btn-outline-secondary" type="button">-</button>
+                        <input type="number" class="form-control" aria-label="">
+                        <button class="btn btn-outline-secondary" type="button">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 btnCont">
+                <button type="button" class="addToCartBtn" (click)="addToCart()">
+                    <i class="bi bi-cart-plus"></i> ADD TO CART
+                </button>
+                <button type="button" class="buyNowBtn" (click)="buyNow()">BUY NOW</button>
+            </div>
+        </div>
+    </div>
+    <div class="row descCont">
+        <div class="col-md-4 p-0">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" 
+                        [ngClass]="{'active': activeTab === 'description'}" 
+                        (click)="activeTab = 'description'"
+                    >
+                        Description
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                        [ngClass]="{'active': activeTab === 'specifications'}" 
+                        (click)="activeTab = 'specifications'"
+                    >
+                        Specifications
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div class="tab-content">
+                <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'description' }" id="description">
+                    <ng-container>
+                        <ul class="list">
+                            <li>Portable, DVD Burner</li>
+                        </ul>
+                    </ng-container>
+                </div>
+                <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'specifications' }" id="specifications">
+                    <ng-container>
+                        <ul class="list">
+                            <li>Portable, DVD Burner</li>
+                            <li>Hardware Interface USB</li>
+                            <li>Hardware Platform Laptop</li>
+                            <li>Item Dimensions LxWxH 10 x 4 x 1 inches</li>
+                        </ul>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

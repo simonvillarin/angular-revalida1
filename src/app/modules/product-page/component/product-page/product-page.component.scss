@@ -5,20 +5,37 @@
 
 .col1 div {
     max-width: 360px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid rgb(206, 206, 206);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
 }
 
 .col1 div img{
     max-width: 350px;
     height: 350px;
+    border-radius: 10px;
+}
+
+.col1 div img:hover{
+    opacity: 0.8;
 }
 
 .col2 {
-    padding: 20px;
+    margin-top: 20px;
 }
+
 .col2 h1 {
     font-weight: 800;
     color: green;
+    margin-top: 30px;
+}
+
+.col2 h1:hover {
+    color: rgb(27, 171, 27);
+}
+
+.col2 h2:hover {
+    color: gray;
 }
 
 .input-group input {
@@ -111,6 +128,9 @@
     color: green;
 }
 
+.col-md-4 ul .nav-link:hover {
+    color: rgb(30, 179, 30);
+}
 
 .col-md-8 .tab-content {
     margin: 15px

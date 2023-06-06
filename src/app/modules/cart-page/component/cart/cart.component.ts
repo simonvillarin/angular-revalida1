@@ -7,7 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
+
+  quantity: number = 0;
   constructor(private router: Router){}
+
+  increase() {
+    this.quantity++;
+  }
+
+  decrease() {
+    if(this.quantity > 0) {
+      this.quantity--;
+    }
+  }
 
   checkout() {
     this.router.navigate(['user/checkout']);

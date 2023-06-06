@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="container">
+<div class="container" *ngFor="let prod of products">
     <div class="title">
         <h1 class="mb-4">Product Details</h1>
     </div>
@@ -7,16 +7,16 @@
         <!-- Product Image -->
         <div class="col-sm-5 col1">
             <div class="text-center">
-                <img src="//cdn.shopify.com/s/files/1/2227/7667/products/LenovoDB60SlimUSBPortableDVDBurnerDB60-WW_1024x1024.jpg?v=1671768668"/>
+                <img [src]=prod.prodImg/>
             </div>
         </div>
 
         <!-- Product Details -->
         <div class="col-sm-7 col2">
             <div>
-                <h2>{{ productName }}</h2>
+                <h2>{{ prod.prodName }}</h2>
                 <hr/>
-                <h1>₱{{ productPrice }}</h1>
+                <h1>₱{{ prod.prodPrice }}</h1>
             </div>
             <div class="row mt-2">
                 <div class="col-3">
@@ -65,14 +65,14 @@
                 <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'description' }" id="description">
                     <ng-container>
                         <ul class="list">
-                            <li>{{ description }}</li>
+                            <li>{{ prod.description }}</li>
                         </ul>
                     </ng-container>
                 </div>
                 <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'specifications' }" id="specifications">
                     <ng-container>
-                        <ul class="list" *ngFor="let description of specifications">
-                            <li>{{ description }}</li>
+                        <ul class="list" *ngFor="let spec of prod.specifications">
+                            <li>{{ spec }}</li>
                         </ul>
                     </ng-container>
                 </div>

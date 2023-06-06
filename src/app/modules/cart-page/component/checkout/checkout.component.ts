@@ -31,4 +31,9 @@ export class CheckoutComponent {
       "prodQuantity": 2
     }
   ]
+
+  // Calculate Total 
+  calculateTotalPrice() {
+    
+  }
 }

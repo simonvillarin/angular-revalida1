@@ -34,7 +34,7 @@
                             <!-- Item Name -->
                             <div class="col-sm-6 me-4 mb-2 text-truncate">{{ prod.prodName }}</div>
                             <!-- Item Price -->
-                            <div class="col-sm-3">₱{{ prod.prodPrice }}</div>
+                            <div class="col-sm-3" >₱{{ prod.prodPrice }}</div>
                             <!-- Quantity -->
                             <div class="col-sm">Qty: {{ prod.prodQuantity }}</div>
                         </div>
@@ -50,7 +50,7 @@
                         <label>Subtotal (2 Items)</label>
                     </div>
                     <div class="col-4">
-                        <h3>₱14,500.00</h3>
+                        <h3>₱{{ calculateTotalPrice() }}</h3>
                     </div>
                 </div>
                 <div class="row mt-3">
@@ -58,7 +58,7 @@
                         <h4>Total Payment:</h4>
                     </div>
                     <div class="col-4">
-                        <h3>₱14,500.00</h3>
+                        <h3>₱{{ calculateTotalPrice() }}</h3>
                     </div>
                 </div>
                 <button type="button" class="btn btn-success placeOrderBtn">Place Order</button>

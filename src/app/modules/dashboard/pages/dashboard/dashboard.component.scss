@@ -8,7 +8,7 @@
 .sidebar {
   position: sticky;
   top: 0;
-  min-height: calc(100vh - 4rem);
+  height: 100vh;
   padding: 0 1rem;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 }
@@ -173,7 +173,6 @@ i {
   }
 }
 
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -260,17 +259,24 @@ i {
   overflow-x: auto;
   width: 100%;
   max-width: 100%;
+  border-radius: 5px;
 }
 
-.demo-table {
-  width: 100%;
-  min-width: 400px; 
-}
-
+// .demo-table {
+//   width: 100%;
+//   min-width: 800px; 
+// }
 
 .title {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 1.3rem;
 }
+
+table th {
+  background-color: rgb(76, 175, 80);
+  color: #fff;
+  font-size: 18px;
+}
+
 
